@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Buyer.Yellow">
+        <item name="colorPrimary">@color/buyer_yellow_600</item>
+        <item name="colorPrimaryVariant">@color/buyer_yellow_800</item>
+        <item name="colorSecondary">@color/buyer_yellow_500</item>
+        <item name="colorSecondaryVariant">@color/buyer_yellow_400</item>
+        <item name="colorOnSurface">@color/buyer_warm_gray_100</item>
+    </style>
+
+    <style name="Splash" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Buyer.Yellow</item>
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_google</item>
+        <item name="windowSplashScreenAnimationDuration">5000</item>
+
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Chip</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Chip" parent="">
+        <item name="colorOnSurface">?attr/colorOnSurface</item>
+    </style>
+
+    <!--Toolbar Design-->
+    <style name="Theme" parent="Base.Buyer">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">@bool/use_light_system_bars
+        </item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Theme.AppBar" parent="ThemeOverlay.MaterialComponents.Dark" />
+
+    <bool name="use_light_system_bars">true</bool>
+</resources>

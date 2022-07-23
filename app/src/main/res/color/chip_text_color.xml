@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_selected="true"
+        android:color="@color/buyer_yellow_50"
+        />
+    <item
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:color="@color/buyer_yellow_50"
+        />
+    <!-- 87% opacity. -->
+    <item
+        android:state_enabled="true"
+        android:alpha="0.87"
+        android:color="@color/buyer_yellow_600"
+        />
+    <!-- 38% of 87% opacity. -->
+    <item
+        android:alpha="0.33"
+        android:color="@color/buyer_yellow_600"
+        />
+
+</selector>

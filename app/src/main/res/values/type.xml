@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Buyer.BottomNavigation" parent="TextAppearance.Buyer.Caption">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">102sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">-0.15</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">64sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">-0.05</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">51sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/dmsans_bold</item>
+        <item name="android:fontFamily">@font/dmsans_bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/dmsans_medium</item>
+        <item name="android:fontFamily">@font/dmsans_medium</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.007</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.015</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/dmsans_medium</item>
+        <item name="android:fontFamily">@font/dmsans_medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/dmsans_medium</item>
+        <item name="android:fontFamily">@font/dmsans_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="TextAppearance.Buyer.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/dmsans_regular</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.015</item>
+
+    </style>
+</resources>

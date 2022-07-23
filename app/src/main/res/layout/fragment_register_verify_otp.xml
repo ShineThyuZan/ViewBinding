@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_otp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/btn_register_get_code"
+        style="@style/Widget.Buyer.Borderless.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_get_code"
+        android:fontFamily="@font/dmsans_regular"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/buyer_yellow_600"
+        app:layout_constraintBottom_toBottomOf="@+id/til_register_phone"
+        app:layout_constraintEnd_toEndOf="@+id/til_register_otp_code"
+        app:layout_constraintTop_toTopOf="@+id/til_register_phone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_register_verify_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/tv_register_verify_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/otp_verify_logo"
+        tools:srcCompat="@drawable/otp_verify_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_verify_otp_instructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/verify_otp_instructions"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/buyer_grey_500"
+        android:fontFamily="@font/dmsans_regular"
+         app:layout_constraintBottom_toTopOf="@+id/til_register_phone"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register_get_code"
+        app:layout_constraintStart_toStartOf="@+id/til_register_phone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_verify_otp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_register_otp_verify"
+        style="@style/Widget.Buyer.OrangeDark.Button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/verify"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_register_phone"
+        style="@style/Widget.Buyer.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        app:prefixText="09"
+        app:layout_constraintBottom_toTopOf="@+id/til_register_otp_code"
+        app:layout_constraintEnd_toStartOf="@+id/btn_register_get_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginEnd="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_register_otp_code"
+        style="@style/Widget.Buyer.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register_otp_verify"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register_otp_verify"
+        app:layout_constraintStart_toStartOf="@+id/btn_register_otp_verify"
+        app:suffixTextAppearance="@style/TextAppearance.Buyer.Body1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_register_otp_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_enter_otp"
+            android:textCursorDrawable="@drawable/cursor_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_register_verify_otp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="@string/register_verify_otp_info"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_subtitle_regular"
+        android:textColor="@color/buyer_grey_900"
+        app:layout_constraintBottom_toTopOf="@+id/tv_verify_otp_instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_register_verify_otp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

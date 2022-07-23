@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buyer_grey_200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_section">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/order_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/shipping_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_order" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_order_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_head" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_order_helper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_order_right"
+                app:layout_constraintStart_toEndOf="@+id/img_order"
+                app:layout_constraintTop_toBottomOf="@+id/tv_order_title"
+                tools:text="Already have 12 orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_order_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/tv_order_helper"
+                app:layout_constraintEnd_toStartOf="@+id/img_order_right"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_order"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="@string/profile_item_order" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shipping_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/payment_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_item">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_location" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_shipping_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_head" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_shipping_helper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_shipping_right"
+                app:layout_constraintStart_toEndOf="@+id/img_shipping"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shipping_title"
+                tools:text="3 addresses" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_shipping_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/tv_shipping_helper"
+                app:layout_constraintEnd_toStartOf="@+id/img_shipping_right"
+                app:layout_constraintStart_toEndOf="@+id/img_shipping"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="@string/profile_item_shipping" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/payment_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/review_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shipping_item">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_payment_method" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_payment_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_head" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_payment_helper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_payment_right"
+                app:layout_constraintStart_toEndOf="@+id/img_payment"
+                app:layout_constraintTop_toBottomOf="@+id/tv_payment_title"
+                tools:text="Already have 12 orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_payment_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/tv_payment_helper"
+                app:layout_constraintEnd_toStartOf="@+id/img_payment_right"
+                app:layout_constraintStart_toEndOf="@+id/img_payment"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="@string/profile_item_payment" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/review_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/setting_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_item">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_review" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_review_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_head" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_review_helper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_review_right"
+                app:layout_constraintStart_toEndOf="@+id/img_review"
+                app:layout_constraintTop_toBottomOf="@+id/tv_review_title"
+                tools:text="Already have 12 orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_review_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/tv_review_helper"
+                app:layout_constraintEnd_toStartOf="@+id/img_review_right"
+                app:layout_constraintStart_toEndOf="@+id/img_review"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="@string/profile_item_reviews" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/review_item">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_setting" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_setting_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_head" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_setting_helper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_setting_right"
+                app:layout_constraintStart_toEndOf="@+id/img_setting"
+                app:layout_constraintTop_toBottomOf="@+id/tv_setting_title"
+                tools:text="Already have 12 orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_setting_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/TextAppearance.Buyer.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/tv_setting_helper"
+                app:layout_constraintEnd_toStartOf="@+id/img_setting_right"
+                app:layout_constraintStart_toEndOf="@+id/img_setting"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="@string/profile_item_setting" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/buyer_grey_900"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPhoneNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvProductImage"
+            app:layout_constraintTop_toTopOf="@+id/cvProductImage"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Ko Ko Thar Po" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsans_regular"
+            android:textColor="@color/buyer_grey_500"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvProductImage"
+            app:layout_constraintEnd_toEndOf="@+id/tvUserName"
+            app:layout_constraintStart_toStartOf="@+id/tvUserName"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+            tools:text="09500r200" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvProductImage"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            app:cardCornerRadius="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/buyer_grey_50"
+            app:strokeWidth="0.1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/item_bag" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingInProfile"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogoutInProfile"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/dance_ani" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_no_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

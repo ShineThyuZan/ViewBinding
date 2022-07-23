@@ -1,0 +1,201 @@
+<resources>
+
+    //shortcuts
+    <string name="buyer_shortcut_short_label">Search</string>
+    <string name="buyer_shortcut_long_label">Search Items</string>
+    <string name="buyer_shortcut_disabled_message">Disabled</string>
+
+    <string name="app_name">buyer</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_password">Password</string>
+    <string name="helper_password">Password at least 8</string>
+    <string name="phone_prefix">09</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+    <string name="tv_forget_pwd">Forgot Password?</string>
+    <string name="hint_name">Username</string>
+    <string name="get_code">Get Code</string>
+    <string name="register_title">Register</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_get_code">Get Code</string>
+    <string name="hint_enter_otp">OTP Code</string>
+    <string name="verify">Verify</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="submit">Submit</string>
+    <string name="skip">Skip</string>
+    <!--Chip Names Start-->
+    <string name="cont">Continue</string>
+    <string name="favourite_title">What are your </string>
+    <string name="interests">interests?</string>
+    <!--Chip Names End-->
+
+    <!--Login Error Start-->
+    <string name="error_login_phone">Incorrect phone number</string>
+    <string name="error_login_pwd_wrong">Incorrect password</string>
+    <string name="error_login_pwd_8">Password must be at least 8</string>
+    <string name="phone">Phone</string>
+    <string name="dialog_login">Signing In...</string>
+    <string name="snack_request_login_success">Login Success</string>
+    <string name="empty_message">Empty State</string>
+    <string name="snack_request_login_fail">Login Fail</string>
+    <string name="snack_request_otp_success">OTP Verification Code is sending to your phone. Please Wait!!!</string>
+    <string name="snack_request_otp_fail">OTP request fail</string>
+    <string name="phone_already_register">This phone number is already register</string>
+    <string name="snack_request_otp_verify_fail">Verification Fail</string>
+    <string name="snack_request_otp_verify_success">Verification Success</string>
+    <string name="hint_email">Email</string>
+    <string name="recovery_email">Recovery Email</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="dialog_register">Registering...</string>
+    <string name="snack_request_register_success">Register Success</string>
+    <string name="snack_request_register_fail">Register Fail</string>
+    <!--Login Error End-->
+
+    <!--Register Start-->
+    <string name="error_register_name">Enter your name</string>
+    <string name="error_register_email">Enter your correct email</string>
+    <string name="error_register_phone">Enter your correct phone number</string>
+    <string name="error_register_otp">Enter the correct code</string>
+    <string name="error_register_pwd">Password must be at least 8</string>
+    <string name="error_register_pwd_confirm">Passwords do not match</string>
+    <string name="select_gender_warning">Please select gender !</string>
+    <string name="helper_confirm_password">Passwords must be matched!</string>
+    <string name="btn_terms"> By clicking "Register", you agree to our </string>
+    <string name="terms_of"><u> Terms of Use </u></string>
+    <string name="and"> and </string>
+    <string name="privacy"><u> Privacy Policy </u></string>
+    <string name="snack_terms">Please read and accept our Terms and Conditions</string>
+    <string name="dialog_verify_otp">Verifying OTP…</string>
+    <string name="dialog_get_otp">Requesting OTP From Server…</string>
+    <string name="snack_no_internet">No internet connection! Please make your connection fixed!</string>
+    <string name="dialog_loading">Loading ...</string>
+    <string name="snack_request_chip_select">Please select at least one favourite category to continue</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_account">Login to your account</string>
+    <string name="dm_sans">DM Sans</string>
+    <string name="verify_phone_question">What is your phone number?</string>
+    <string name="verify_phone_instructions">We need to verify your identity. Please enter you phone number. You will receive an OTP.</string>
+    <string name="register_verify_otp_info">We need to verify your identity.</string>
+    <string name="register_otp_resend_notice">If you didn’t receive a code!</string>
+    <string name="resend">Resend</string>
+    <string name="recoverAccountNotice">You can recovery, if you forget your password.</string>
+    <string name="other">Other</string>
+    <string name="tvGender">Gender</string>
+    <string name="password_verify_instructions">Enter the phone number associated with your account.</string>
+    <string name="password_verify_notice">We will send you an OTP to reset your password.</string>
+    <string name="btn_get_code">Get Code</string>
+    <string name="change">Change</string>
+    <string name="set_new_password">Set your new password.</string>
+    <string name="password_reset_notice">Your identity has been verified.</string>
+    <string name="password_reset_success">Password Reset Successful!</string>
+    <string name="strikethrough_text"><strike> 33300MMk </strike></string>
+    <!--Register End-->
+
+    <string-array name="country">
+        <item> Country</item>
+    </string-array>
+
+    //top-lvl dest
+    <string name="menu_title_home">home</string>
+    <string name="menu_title_favourite">favourite</string>
+    <string name="menu_title_cart">cart</string>
+    <string name="menu_title_message">message</string>
+    <string name="menu_title_profile">profile</string>
+    <string name="title_home">Home</string>
+    <string name="title_favourite">My Favourite</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_profile">My Profile</string>
+
+    //second-lvl dest
+    <string name="title_detail">Item Detail</string>
+    <string name="search">Search</string>
+    <string name="price_label">1pcs, price</string>
+    <string name="mmk">MMK</string>
+    <string name="discount_price">-50%</string>
+    <string name="review_count">2,156 reviews</string>
+    <string name="checkout">Check Out</string>
+
+    //order pager
+    <string name="order_all">All</string>
+    <string name="order_pending">Pending</string>
+    <string name="order_processing">Processing</string>
+    <string name="order_delivered">Delivered</string>
+    <string name="order_refunded">Refunded</string>
+    <string name="order_refunding">Refunding</string>
+    <string name="order_completed">Completed</string>
+
+    <string name="resend_text">Resend Code after</string>
+<!--    <string name="server_client_id">server_client_id</string>-->
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="description">Description</string>
+    <string name="description_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu eget tellus metus turpis ut felis arcu nulla. Mauris nulla et quis facilisis pulvinar nulla sagittis justo vestibulum.</string>
+    <string name="variants">Variants</string>
+    <string name="more">More</string>
+    <string name="xxxl">XXXL</string>
+    <string name="xxl">XXL</string>
+    <string name="xl">XL</string>
+    <string name="l">L</string>
+    <string name="highlights">Highlights</string>
+    <string name="highlight_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu eget tellus metus turpis ut felis arcu nulla. Mauris nulla et quis facilisis pulvinar nulla sagittis justo vestibulum.  \n\nArcu eget tellus metus turpis ut felis arcu nulla. Consectetur adipiscing elit arcu eget tellus metus turpis ut felis arcu nulla auris nulla et quis facilisis</string>
+    <string name="product_reviews">Product Reviews</string>
+    <string name="all_reviews">All reviews</string>
+    <string name="average_rating">43</string>
+    <string name="angel_star">Angel Star</string>
+    <string name="reviewer_comment">We sell eco friendly handmade products</string>
+    <string name="rating_description">4.2/5 (2,156 reviews)</string>
+    <string name="write_review">Write a Review</string>
+    <string name="visit">Visit</string>
+    <string name="more_product">More Product</string>
+    <string name="price">Price</string>
+    <string name="price_value">5,000 Ks</string>
+    <string name="colors">Colors</string>
+    <string name="sizes">Sizes</string>
+    <string name="m">M</string>
+    <string name="s">S</string>
+    <string name="quantity">Quantity</string>
+    <string name="verify_otp_instructions">Please enter your phone number. You will receive an OTP</string>
+    <string name="otp_info">A user with the phone number (+95) 9%1$s already exists.</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="login">Login</string>
+    <string name="five">5</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="five_stars">5 Stars</string>
+    <string name="four_stars">4 Stars</string>
+    <string name="three_stars">3 Stars</string>
+    <string name="two_stars">2 Stars</string>
+    <string name="one_stars">1 Stars</string>
+    <string name="reviewer_name">Kyaw********</string>
+    <string name="review_date">1 Jan 2022</string>
+    <string name="reivew_comment">This product is very high quality, fantastic quality and very good sizing.</string>
+    <string name="review_instruction">Rate and review your experience for product.</string>
+    <string name="rating_instruction">Describe your experience</string>
+    <string name="submit_review">Submit Review</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="add_address">Add Address</string>
+    <string name="order">Order:</string>
+    <string name="order_value">45,000 Ks</string>
+    <string name="submit_order">Submit Order</string>
+    <string name="profile_item_order">My Orders</string>
+    <string name="profile_item_shipping">Shipping Address</string>
+    <string name="profile_item_payment">Payment Method</string>
+    <string name="profile_item_reviews">My reviews</string>
+    <string name="profile_item_setting">Setting</string>
+    <string name="logout">Logout</string>
+    <string name="country">Country</string>
+    <string name="address_line">Address Line</string>
+    <string name="city">City</string>
+    <string name="state">State/Province/Region</string>
+    <string name="save_address">Save Address</string>
+    <string name="holder_name">Card Holder Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="expired">Expired</string>
+    <string name="cvv">CVV</string>
+    <string name="save_payment">Save Payment</string>
+    <string name="payment">Payment</string>
+    <string name="add_payment">Add Payment</string>
+
+</resources>

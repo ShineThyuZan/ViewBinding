@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "482960356014",
+    "project_id": "galaxytecno-buyer-87ff7",
+    "storage_bucket": "galaxytecno-buyer-87ff7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482960356014:android:7b43211adb541d191a333f",
+        "android_client_info": {
+          "package_name": "com.galaxy_techno.buyer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482960356014-pgd2tdbev305jj51r54usvn46a9hrijc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.galaxy_techno.buyer",
+            "certificate_hash": "a5fa1af6abebd574b8d461c6334e136d2f16e9d5"
+          }
+        },
+        {
+          "client_id": "482960356014-504s3c2vq46gerqb1ss34dnu983lseu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR3IuDeMfJeo_qE18y9NeMuV-jj2y-mAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482960356014-504s3c2vq46gerqb1ss34dnu983lseu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

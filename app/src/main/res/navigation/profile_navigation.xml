@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_navigation"
+    app:startDestination="@id/topProfileFragment">
+
+
+    <fragment
+        tools:layout="@layout/fragment_top_profile"
+        android:id="@+id/topProfileFragment"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.profile.TopProfileFragment"
+        android:label="TopProfileFragment" >
+        <action
+            android:id="@+id/action_topProfileFragment_to_fragmentProfileMyOrder"
+            app:destination="@id/fragmentProfileMyOrder" />
+        <action
+            android:id="@+id/action_topProfileFragment_to_fragmentProfileMyReview"
+            app:destination="@id/fragmentProfileMyReview" />
+        <action
+            android:id="@+id/action_topProfileFragment_to_fragmentProfileShippingAddress"
+            app:destination="@id/fragmentProfileShippingAddress" />
+        <action
+            android:id="@+id/action_topProfileFragment_to_fragmentProfileSetting"
+            app:destination="@id/fragmentProfileSetting" />
+        <action
+            android:id="@+id/action_topProfileFragment_to_fragmentProfilePaymentMethod"
+            app:destination="@id/fragmentProfilePaymentMethod" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentProfileMyOrder"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.profile.order_taps.FragmentProfileMyOrder"
+        android:label="FragmentProfileMyOrder"
+        tools:layout="@layout/fragment_profile_my_order" />
+    <fragment
+        android:id="@+id/fragmentProfileMyReview"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.profile.my_review.FragmentProfileMyReview"
+        android:label="FragmentProfileMyReview"
+        tools:layout="@layout/fragment_profile_review" />
+    <fragment
+        android:id="@+id/fragmentProfilePaymentMethod"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.profile.FragmentProfilePaymentInfo"
+        android:label="FragmentProfilePaymentMethod"
+        tools:layout="@layout/fragment_profile_payment_info" />
+    <fragment
+        android:id="@+id/fragmentProfileSetting"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.profile.setting.FragmentProfileSetting"
+        android:label="FragmentProfileSetting"
+        tools:layout="@layout/fragment_profile_setting" >
+
+        <action
+            android:id="@+id/action_profile_to_auth"
+            app:destination="@id/auth_navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfileShippingAddress"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.profile.FragmentProfileShippingAddress"
+        android:label="FragmentProfileShippingAddress"
+        tools:layout="@layout/fragment_profile_shipping_address"/>
+</navigation>

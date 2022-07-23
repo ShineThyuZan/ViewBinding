@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/top_home_navigation">
+
+    <include app:graph="@navigation/auth_navigation" />
+    <include app:graph = "@navigation/top_home_navigation"/>
+    <include app:graph ="@navigation/profile_navigation"/>
+
+    <fragment
+        android:id="@+id/dest_top_favourite"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.favourite.TopFavouriteFragment"
+        android:label="@string/title_favourite"
+        tools:layout="@layout/fragment_top_favourite" />
+
+    <fragment
+        android:id="@+id/dest_top_cart"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.cart.TopCartFragment"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_top_cart" />
+
+    <fragment
+        tools:layout="@layout/fragment_top_message"
+        android:id="@+id/dest_top_message"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.message.TopMessageFragment"
+        android:label="TopMessageFragment" />
+
+</navigation>

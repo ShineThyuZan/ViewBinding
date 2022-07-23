@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sv_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <Button
+            android:id="@+id/btn_confirm_register"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_register"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/til_register_confirm_password"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/til_register_confirm_password"
+            app:layout_constraintTop_toBottomOf="@+id/linearText"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/tv_register_title"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_upload_image"
+            app:layout_constraintBottom_toTopOf="@+id/til_register_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="@+id/til_register_phone"
+            app:layout_constraintStart_toStartOf="@+id/til_register_phone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gender">
+
+            <RadioGroup
+                android:id="@+id/rg_register_gender"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/buyer_yellow_600"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_register_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/rb_register_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:text="@string/female" />
+
+                <RadioButton
+                    android:id="@+id/rb_register_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:text="@string/other" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/linearText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_13sdp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_terms">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dmsans_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/terms_of"
+                android:textColor="@color/buyer_yellow_600" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/dmsans_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/and" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_13sdp"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="@string/privacy"
+                android:layout_weight="1"
+                android:textColor="@color/buyer_yellow_600" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_recoverEmailNotice"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/dmsans_regular"
+            android:text="@string/recoverAccountNotice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_register_email" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/dmsans_regular"
+            android:textColor="@color/buyer_grey_900"
+            android:text="@string/tvGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_register_confirm_password" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/dmsans_regular"
+            android:text="@string/btn_terms"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_register_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintBottom_toTopOf="@+id/til_register_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/dmsans_regular"
+                android:hint="@string/hint_name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_register_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="@+id/til_register_email"
+            app:layout_constraintEnd_toEndOf="@+id/til_register_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/til_register_name"
+            app:layout_constraintTop_toBottomOf="@+id/til_register_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:hint="@string/hint_phone_number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_register_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="@+id/til_register_phone"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/til_register_phone"
+            app:layout_constraintTop_toBottomOf="@+id/til_register_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:hint="@string/hint_email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_register_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:helperText="@string/helper_password"
+            app:layout_constraintEnd_toEndOf="@+id/til_register_phone"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/til_register_phone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recoverEmailNotice"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:hint="@string/hint_password" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_register_confirm_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:helperText="@string/helper_confirm_password"
+            app:layout_constraintEnd_toEndOf="@+id/til_register_password"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/til_register_password"
+            app:layout_constraintTop_toBottomOf="@+id/til_register_password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_register_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:hint="@string/hint_confirm_password" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

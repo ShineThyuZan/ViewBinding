@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkout_navigation"
+    app:startDestination="@id/dest_checkout_info_request">
+
+    <fragment
+        android:id="@+id/dest_checkout_info_request"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.checkout.FragmentCheckoutInfoRequest"
+        android:label="Checkout"
+        tools:layout="@layout/checkout_info_request">
+        <action
+            android:id="@+id/action_dest_checkout_info_request_to_dest_profile_shipping_address"
+            app:destination="@id/dest_profile_shipping_address" />
+        <action
+            android:id="@+id/action_dest_checkout_info_request_to_dest_profile_payment_info"
+            app:destination="@id/dest_profile_payment_info" />
+    </fragment>
+    <dialog
+        android:id="@+id/dest_country_select_bottom_sheet"
+        android:name="com.galaxy_techno.buyer.presentation.country_list.CountryFilterBottomSheetFragment"
+        android:label="CountryFilterBottomSheetFragment"
+        tools:layout="@layout/country_filter_bottom_sheet"/>
+    <fragment
+        android:id="@+id/dest_profile_shipping_address"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.profile.FragmentProfileShippingAddress"
+        android:label="FragmentProfileShippingAddress"
+        tools:layout="@layout/fragment_profile_shipping_address">
+        <action
+            android:id="@+id/action_dest_profile_shipping_address_to_dest_country_select_bottom_sheet"
+            app:destination="@id/dest_country_select_bottom_sheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_profile_payment_info"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.profile.FragmentProfilePaymentInfo"
+        android:label="FragmentProfilePaymentInfo"
+        tools:layout="@layout/fragment_profile_payment_info"/>
+
+</navigation>

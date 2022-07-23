@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buyer_grey_50">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_general_review"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RatingBar
+            android:id="@+id/ratingBar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:stepSize="0.1"
+            android:rating="3.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_average_rating" />
+
+        <TextView
+            android:id="@+id/tv_average_rating"
+            style="@style/TextAppearance.Buyer.Headline4"
+            android:layout_width="47dp"
+            android:layout_height="wrap_content"
+            android:text="@string/average_rating"
+            android:textColor="@color/buyer_grey_900"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/TextAppearance.Buyer.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/rating_description"
+            android:textColor="@color/buyer_grey_500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_general_review"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cl_general_review"
+        app:layout_constraintTop_toTopOf="@+id/cl_general_review">
+
+        <ProgressBar
+            android:id="@+id/pb_five"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:progress="70"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_five"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_five"
+            app:layout_constraintTop_toTopOf="@+id/tv_five" />
+
+        <ProgressBar
+            android:id="@+id/pb_four"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:progress="25"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_four"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_four"
+            app:layout_constraintTop_toTopOf="@+id/tv_four" />
+
+        <ProgressBar
+            android:id="@+id/pb_three"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:progress="10"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_three"
+            app:layout_constraintTop_toTopOf="@+id/tv_three" />
+
+        <ProgressBar
+            android:id="@+id/pb_two"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_two"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_two"
+            app:layout_constraintTop_toTopOf="@+id/tv_two" />
+
+        <ProgressBar
+            android:id="@+id/pb_one"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:progress="5"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_one"
+            app:layout_constraintTop_toTopOf="@+id/tv_one" />
+
+        <TextView
+            android:id="@+id/tv_five"
+            style="@style/TextAppearance.Buyer.Body2"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            android:textAlignment="center"
+            android:textColor="@color/buyer_grey_900"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            style="@style/TextAppearance.Buyer.Body2"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_five" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            style="@style/TextAppearance.Buyer.Body2"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            android:textAlignment="center"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_four" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            style="@style/TextAppearance.Buyer.Body2"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_three" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            style="@style/TextAppearance.Buyer.Body2"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_two" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_general_review">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_stars"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/all_reviews" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/five_stars" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/four_stars" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/three_stars" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/two_stars" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/one_stars" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/pure_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        tools:listitem="@layout/review_info_view_pod"
+        tools:itemCount="4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

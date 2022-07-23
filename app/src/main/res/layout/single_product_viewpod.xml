@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/_8sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_16sdp"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvProductImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/buyer_grey_50"
+        app:strokeWidth="0.1dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/item_bag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvCartProductName"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/dmsans_regular"
+        android:maxLines="2"
+        android:text="Samsung A02s"
+        android:textColor="@color/buyer_grey_900"
+        android:textSize="@dimen/_14sdp"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvProductImage" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tvProductCount"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="1 pic, prices"
+        android:textColor="@color/buyer_grey_500"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCartProductName" />
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tvProductPrice"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="15000 MMk"
+        android:textColor="@color/buyer_grey_900"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductCount" />
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tvRecentPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="@string/strikethrough_text"
+        android:textColor="@color/buyer_grey_900"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductPrice" />
+
+    <TextView
+        android:id="@+id/tvPromotionPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 %"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:textColor="@color/buyer_yellow_600"
+        android:fontFamily="@font/dmsans_regular"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRecentPrice"
+        app:layout_constraintEnd_toEndOf="@+id/cvProductImage"
+        app:layout_constraintTop_toTopOf="@+id/tvRecentPrice" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

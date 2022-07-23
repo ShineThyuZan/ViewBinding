@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Buyer.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="searchHintIcon">@null</item>
+        <item name="searchIcon">@null</item>
+        <item name="iconifiedByDefault">false</item>
+        <item name="queryHint">@string/search</item>
+    </style>
+
+    <style name="Widget.Buyer.BottomNavigationView" parent="@style/Widget.MaterialComponents.BottomNavigationView">
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="backgroundColor">@color/buyer_warm_gray_100</item>
+        <item name="itemIconTint">@color/bottom_nav_icon</item>
+        <item name="itemTextColor">@color/bottom_nav_text</item>
+        <!--<item name="itemBackground">@color/bottom_nav_item</item>-->
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+
+
+    <!--hint text style-->
+    <style name="HintTextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/text_subtitle_regular</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="roundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!--Rating Bar Style-->
+    <string name="rounded">rounded</string>
+</resources>

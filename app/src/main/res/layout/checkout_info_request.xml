@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_other_lvl_primary"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/cv_request_payment_info"
+        app:layout_constraintStart_toStartOf="@+id/cv_request_payment_info"
+        app:layout_constraintTop_toBottomOf="@+id/cv_request_payment_info">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/order"
+            android:textColor="@color/buyer_grey_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_value"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_value"
+            android:textColor="@color/buyer_grey_900"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_info_request_submit_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buyer_grey_200"
+        android:clickable="false"
+        android:text="@string/submit_order"
+        android:textColor="@color/buyer_grey_400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cl_order"
+        app:layout_constraintStart_toStartOf="@+id/cl_order" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_request_address"
+        android:layout_width="288dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/buyer_grey_100"
+        app:layout_constraintEnd_toEndOf="@+id/tv_shipping_address"
+        app:layout_constraintStart_toStartOf="@+id/tv_shipping_address"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shipping_address">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_request_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dotted_line">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_add_address"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:layout_marginTop="27dp"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:text="@string/add_address"
+                android:textColor="@color/buyer_grey_500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_request_payment_info"
+        android:layout_width="288dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/buyer_grey_100"
+        app:layout_constraintEnd_toEndOf="@+id/tv_request_payment_info"
+        app:layout_constraintStart_toStartOf="@+id/tv_request_payment_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_request_payment_info">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_request_payment_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_dotted_line">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_add_payment_info"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:layout_marginTop="27dp"
+                android:drawableLeft="@drawable/ic_payment_method"
+                android:drawablePadding="8dp"
+                android:text="@string/add_payment"
+                android:textColor="@color/buyer_grey_500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_request_payment_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/payment"
+        app:layout_constraintEnd_toEndOf="@+id/cv_request_address"
+        app:layout_constraintStart_toStartOf="@+id/cv_request_address"
+        app:layout_constraintTop_toBottomOf="@id/cv_request_address" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_shipping_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/shipping_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

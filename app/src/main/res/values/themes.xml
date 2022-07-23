@@ -1,0 +1,215 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Base theme, all common styling here-->
+    <style name="Base.Buyer" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Buyer.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Buyer.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Buyer.LargeComponent
+        </item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Buyer.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Buyer.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Buyer.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Buyer.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Buyer.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Buyer.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Buyer.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Buyer.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Buyer.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Buyer.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Buyer.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Buyer.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Buyer.Overline</item>
+
+        <!--Platform attributes-->
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+        <item name="android:statusBarColor">@color/immersive_sys_ui</item>
+
+        <!--Default styles-->
+        <item name="bottomNavigationStyle">@style/Widget.Buyer.BottomNavigationView</item>
+        <item name="bottomSheetStyle">@style/Widget.Buyer.CustomBottomSheetDialog</item>
+        <item name="searchViewStyle">@style/Widget.Buyer.SearchView</item>
+        <item name="buttonStyle">@style/Widget.Buyer.OrangeDark.Button</item>
+
+        <!--Customize style-->
+        <item name="textInputStyle">@style/Widget.Buyer.TextInputLayout</item>
+        <item name="editTextStyle">@style/Widget.TextInputEditText.Buyer</item>
+        <item name="ratingBarStyle">@style/RatingStarColor</item>
+        <item name="chipStyle">@style/Widget.Buyer.Chip.Choice</item>
+        <item name="materialCardViewStyle">@style/Widget.CardView.Buyer</item>
+        <item name="android:progressTint">@color/buyer_yellow_600</item>
+        <item name="android:progressBackgroundTint">@color/buyer_yellow_100</item>
+    </style>
+
+    <!--Button Style-->
+    <style name="Widget.Buyer.OrangeLight.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:colorControlHighlight">@color/buyer_yellow_100</item>
+        <item name="strokeColor">@color/buyer_yellow_600</item>
+        <item name="android:textColor">@color/buyer_yellow_900</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_body_regular</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Buyer.LargeComponent</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Buyer.Button</item>
+    </style>
+
+    <style name="Widget.Buyer.OrangeDark.Button" parent="Base.TextAppearance.MaterialComponents.Button">
+        <item name="android:colorControlHighlight">@color/buyer_yellow_400</item>
+        <item name="android:backgroundTint">@color/buyer_yellow_600</item>
+        <item name="android:textColor">@color/buyer_yellow_50</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_body_regular</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Buyer.LargeComponent</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Buyer.Button</item>
+    </style>
+
+    <style name="Widget.Buyer.Borderless.Button" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/buyer_yellow_600</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Buyer.Button</item>
+    </style>
+
+    <style name="Buyer" parent="Base.Buyer" />
+
+    <style name="Buyer.Yellow">
+        <item name="colorPrimary">@color/buyer_yellow_600</item>
+        <item name="colorPrimaryVariant">@color/buyer_yellow_800</item>
+        <item name="colorSecondary">@color/buyer_yellow_500</item>
+        <item name="colorSecondaryVariant">@color/buyer_yellow_400</item>
+        <item name="colorOnSurface">@color/buyer_warm_gray_900</item>
+    </style>
+
+    <style name="Splash" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Buyer.Yellow</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_google</item>
+        <item name="windowSplashScreenAnimationDuration">5000</item>
+    </style>
+
+
+    //others themes : these should be in related xml files like shapes.xml, type.xml, styles.xml
+
+    <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Chip</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Chip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="colorOnSurface">@color/buyer_yellow_600</item>
+    </style>
+
+    <style name="AnimationForDialog">
+        <item name="android:windowEnterAnimation">
+            @anim/zoom_in
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/zoom_out
+        </item>
+    </style>
+
+    <style name="AnimationForBottomSheet">
+        <item name="android:windowEnterAnimation">
+            @anim/bottom_to_top
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/top_to_bottom
+        </item>
+    </style>
+
+    <style name="RatingStarColor" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressTint">@color/buyer_yellow_600</item>
+            <item name="android:progressBackgroundTint">@color/buyer_red_300</item>
+        <item name="android:rating">@color/buyer_red_300</item>
+    </style>
+
+    <!--Text Input Layout-->
+    <style name="Widget.Buyer.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="hintTextColor">@color/buyer_grey_700</item>
+        <item name="boxCornerRadiusTopStart">@dimen/margin_card_regular</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_card_regular</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_card_regular</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_card_regular</item>
+        <item name="boxStrokeColor">@color/buyer_grey_600</item>
+        <item name="boxStrokeErrorColor">@color/buyer_red_600</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Buyer.LargeComponent</item>
+    </style>
+
+    <!--Text Input EditText-->
+    <style name="Widget.TextInputEditText.Buyer" parent="Widget.MaterialComponents.TimePicker.Display.TextInputEditText">
+        <item name="hintTextAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColorHint">@color/buyer_grey_700</item>
+    </style>
+
+    <!--Chip Design-->
+    <style name="Widget.Buyer.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <!-- Chip background color selector -->
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <!-- Border color -->
+        <item name="chipStrokeColor">@color/chip_text_color</item>
+
+        <!-- Chip text color selector -->
+        <item name="android:textColor">@color/chip_text_color</item>
+        <!-- Chip close icon color selector -->
+        <!--        <item name="closeIconTint">@color/mtrl_chip_close_icon_tint</item>-->
+    </style>
+
+    <!--Toolbar Design-->
+    <style name="Theme" parent="Base.Buyer">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">@bool/use_light_system_bars
+        </item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Theme.AppBar" parent="ThemeOverlay.MaterialComponents.Dark" />
+
+    <style name="originalTheme" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="Widget.Buyer.Card.Stroke" parent="Buyer">
+        <!-- Card stroke color selector -->
+        <item name="strokeColor">@color/variant_stroke</item>
+    </style>
+
+    <!--Variant Card Stroke Design-->
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <!--Custom Card View Style-->
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+    </style>
+
+    <style name="Widget.Buyer.CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+        <item name="background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="Widget.CardView.Buyer" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="cardCornerRadius">16dp</item>
+    </style>
+
+    <!--Bottom Sheet Design-->
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+    </style>
+
+    <bool name="use_light_system_bars">true</bool>
+
+</resources>

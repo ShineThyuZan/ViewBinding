@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_regular"
+    android:background="@color/buyer_grey_50">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/buyer_grey_50"
+        app:strokeWidth="0.1dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_selected_product"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/item_bag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/dmsans_regular"
+        android:maxLines="2"
+        android:text="Samsung A02s"
+        android:textColor="@color/buyer_grey_900"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_product" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tv_product_count"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="1 pic, prices"
+        android:textColor="@color/buyer_grey_500"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tv_product_price"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="15000 MMk"
+        android:textColor="@color/buyer_grey_900"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_count" />
+    <TextView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/tv_recent_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="@string/strikethrough_text"
+        android:textColor="@color/buyer_grey_900"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_price" />
+
+    <TextView
+        android:id="@+id/tv_promotion_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 %"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:textColor="@color/buyer_yellow_600"
+        android:fontFamily="@font/dmsans_regular"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_recent_price"
+        app:layout_constraintEnd_toEndOf="@+id/cv_product"
+        app:layout_constraintTop_toTopOf="@+id/tv_recent_price" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

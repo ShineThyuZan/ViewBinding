@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_home_navigation"
+    app:startDestination="@id/dest_top_home">
+
+    <include app:graph ="@navigation/checkout_navigation"/>
+    <dialog
+        android:id="@+id/dest_variant"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.selected_detail.ItemVariantsBottomSheet"
+        android:label="ItemVariantsBottomSheet"
+        tools:layout="@layout/bottom_sheet_variants" >
+        <action
+            android:id="@+id/action_dest_variant_to_checkout_navigation"
+            app:destination="@id/checkout_navigation" />
+    </dialog>
+    <dialog
+        android:id="@+id/dest_product_filter"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.search.ProductsFilterBottomNavigationFragment"
+        android:label="ProductsFilterBottomNavigationFragment"
+        tools:layout="@layout/product_filter_bottom_sheet">
+        <argument
+            android:name="productId"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/dest_top_home"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.home.TopHomeFragment"
+        android:label="TopHomeFragment"
+        tools:layout="@layout/fragment_top_home">
+        <action
+            android:id="@+id/action_dest_home_to_search"
+            app:destination="@id/dest_search" />
+        <action
+            android:id="@+id/action_dest_top_home_to_dest_all_category"
+            app:destination="@id/dest_all_category" />
+        <action
+            android:id="@+id/action_dest_home_to_detail_list"
+            app:destination="@id/dest_detail_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_search"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_dest_search_to_result"
+            app:destination="@id/dest_search_result">
+            <argument
+                android:name="searchResultText"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/dest_all_category"
+        android:name="com.galaxy_techno.buyer.presentation.top_lvl_dest.home.AllCategoryFragment"
+        android:label="AllCategoryFragment"
+        tools:layout="@layout/fragment_all_product_category" />
+    <fragment
+        android:id="@+id/dest_search_result"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.search.SearchResultProductsListFragment"
+        android:label="SearchResultProductsListFragment"
+        tools:layout="@layout/fragment_search_result_products">
+        <action
+            android:id="@+id/action_dest_search_result_to_detail_list"
+            app:destination="@id/dest_detail_list" />
+        <action
+            android:id="@+id/action_dest_search_result_to_product_filter"
+            app:destination="@id/dest_product_filter">
+            <argument
+                android:name="productId"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+        <argument
+            android:name="searchResultText"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_detail_list"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.detail.FragmentItemDetailList"
+        android:label="FragmentItemDetailList"
+        tools:layout="@layout/fragment_item_detail_list">
+        <action
+            android:id="@+id/action_dest_list_to_selected"
+            app:destination="@id/dest_selected_detail" />
+        <action
+            android:id="@+id/action_dest_detail_list_to_search"
+            app:destination="@id/dest_search" />
+        <action
+            android:id="@+id/action_dest_detail_list_to_dest_checkout_info_request"
+            app:destination="@id/dest_checkout_info_request" />
+        <action
+            android:id="@+id/action_dest_detail_list_to_checkout_navigation"
+            app:destination="@id/checkout_navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_selected_detail"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.selected_detail.SelectedItemDetail"
+        android:label="SelectedItemDetail"
+        tools:layout="@layout/fragment_item_selected_detail">
+        <action
+            android:id="@+id/action_dest_selected_to_all_review"
+            app:destination="@id/dest_all_review" />
+        <action
+            android:id="@+id/action_dest_selected_to_summit"
+            app:destination="@id/dest_summit_review" />
+        <action
+            android:id="@+id/action_dest_selected_to_variant"
+            app:destination="@id/dest_variant" />
+        <action
+            android:id="@+id/action_dest_selected_to_search"
+            app:destination="@id/dest_search" />
+        <action
+            android:id="@+id/action_dest_selected_detail_to_checkout_navigation"
+            app:destination="@id/checkout_navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_all_review"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.selected_detail.SelectedItemAllReviews"
+        android:label="SelectedItemAllReviews"
+        tools:layout="@layout/product_all_reviews" />
+    <fragment
+        android:id="@+id/dest_summit_review"
+        android:name="com.galaxy_techno.buyer.presentation.second_lvl_dest.selected_detail.SelectedItemSubmitReview"
+        android:label="SelectedItemSubmitReview"
+        tools:layout="@layout/submit_product_review" />
+
+</navigation>

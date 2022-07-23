@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_search"
+        android:shortcutDisabledMessage="@string/buyer_shortcut_disabled_message"
+        android:shortcutId="NewDonutDialogFragment"
+        android:shortcutLongLabel="@string/buyer_shortcut_long_label"
+        android:shortcutShortLabel="@string/buyer_shortcut_short_label">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="buyer://galaxy_techno.com/search" />
+    </shortcut>
+
+</shortcuts>
